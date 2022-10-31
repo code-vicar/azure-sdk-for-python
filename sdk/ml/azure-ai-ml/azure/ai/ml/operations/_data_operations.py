@@ -237,7 +237,7 @@ class DataOperations(_ScopeDependentOperations):
             if is_url(asset_path):
                 try:
                     metadata_contents = read_remote_mltable_metadata_contents(
-                        path=asset_path,
+                        base_uri=asset_path,
                         datastore_operations=self._datastore_operation,
                         requests_pipeline=self._requests_pipeline,
                     )
